@@ -16,12 +16,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     ""maps"": [
         {
             ""name"": ""GroundMovement"",
-            ""id"": ""84122b55-0b57-425b-a712-40016ceb25b7"",
+            ""id"": ""804ed0ac-e4ab-4a8d-9043-972bbe0dfaec"",
             ""actions"": [
                 {
                     ""name"": ""HorizontalMovement"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""0d64808f-1ae5-4b42-978a-c5019b783654"",
+                    ""id"": ""a5f45b4d-a527-4e17-9103-8e2852ae2d52"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -29,7 +29,31 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""930d4c0b-8018-43b7-b7a2-c9ad245eefbd"",
+                    ""id"": ""b33bdaa5-4394-4fae-9de1-40ddab4937cc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MouseX"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""7aeea560-d44c-48f3-b8f1-1385ed8b7295"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MouseY"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""10bdaf9e-fbef-453c-9638-e3208862d5ab"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""5a151eea-63e9-486d-96c6-ad2b26b08464"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -38,7 +62,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""WASD"",
-                    ""id"": ""f0273915-4c8c-4005-9505-91792779affe"",
+                    ""id"": ""ed56da1f-ea6f-44c4-a9dc-7485d237e9cf"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -49,7 +73,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""cf78b622-9f06-44ca-9fa6-0afab9bab84c"",
+                    ""id"": ""b635785b-0f56-4054-a630-15dc6a80a17e"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -60,7 +84,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""746e638d-3eb9-43df-ab68-ab810f31ffdc"",
+                    ""id"": ""9699c11d-7428-43bb-aab2-bfaed5a12670"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -71,7 +95,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""9c78cac3-118d-42dc-8a22-1379bc98e000"",
+                    ""id"": ""cc137f07-c284-4ee5-95d1-16f948614915"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -82,7 +106,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""1268a714-e77d-4de1-87dd-3492c92501b8"",
+                    ""id"": ""6411b2c1-ef84-4408-9333-86ce11cad7ce"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -93,12 +117,45 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8edfc564-8643-44cd-b848-5cefb3ad8b44"",
+                    ""id"": ""91e129ea-1935-45a2-aa00-72ef4fba9e3d"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cd84f43d-e27c-4efc-8e5d-82e31c134681"",
+                    ""path"": ""<Mouse>/delta/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""38f96e9c-f6fe-43ae-ac1c-afa03e23e17d"",
+                    ""path"": ""<Mouse>/delta/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseY"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ef39ed83-af92-4204-bd3f-ca22e60e0e6a"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -111,6 +168,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_GroundMovement = asset.FindActionMap("GroundMovement", throwIfNotFound: true);
         m_GroundMovement_HorizontalMovement = m_GroundMovement.FindAction("HorizontalMovement", throwIfNotFound: true);
         m_GroundMovement_Jump = m_GroundMovement.FindAction("Jump", throwIfNotFound: true);
+        m_GroundMovement_MouseX = m_GroundMovement.FindAction("MouseX", throwIfNotFound: true);
+        m_GroundMovement_MouseY = m_GroundMovement.FindAction("MouseY", throwIfNotFound: true);
+        m_GroundMovement_Shoot = m_GroundMovement.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -162,12 +222,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private IGroundMovementActions m_GroundMovementActionsCallbackInterface;
     private readonly InputAction m_GroundMovement_HorizontalMovement;
     private readonly InputAction m_GroundMovement_Jump;
+    private readonly InputAction m_GroundMovement_MouseX;
+    private readonly InputAction m_GroundMovement_MouseY;
+    private readonly InputAction m_GroundMovement_Shoot;
     public struct GroundMovementActions
     {
         private @PlayerControls m_Wrapper;
         public GroundMovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @HorizontalMovement => m_Wrapper.m_GroundMovement_HorizontalMovement;
         public InputAction @Jump => m_Wrapper.m_GroundMovement_Jump;
+        public InputAction @MouseX => m_Wrapper.m_GroundMovement_MouseX;
+        public InputAction @MouseY => m_Wrapper.m_GroundMovement_MouseY;
+        public InputAction @Shoot => m_Wrapper.m_GroundMovement_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_GroundMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -183,6 +249,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnJump;
+                @MouseX.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseX;
+                @MouseX.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseX;
+                @MouseX.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseX;
+                @MouseY.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
+                @MouseY.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
+                @MouseY.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnMouseY;
+                @Shoot.started -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_GroundMovementActionsCallbackInterface.OnShoot;
             }
             m_Wrapper.m_GroundMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -193,6 +268,15 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @MouseX.started += instance.OnMouseX;
+                @MouseX.performed += instance.OnMouseX;
+                @MouseX.canceled += instance.OnMouseX;
+                @MouseY.started += instance.OnMouseY;
+                @MouseY.performed += instance.OnMouseY;
+                @MouseY.canceled += instance.OnMouseY;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
             }
         }
     }
@@ -201,5 +285,8 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     {
         void OnHorizontalMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnMouseX(InputAction.CallbackContext context);
+        void OnMouseY(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
 }
