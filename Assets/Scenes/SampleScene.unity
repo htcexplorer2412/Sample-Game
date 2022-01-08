@@ -186,9 +186,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 557651491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e3624719db29d54e87ccee418039003, type: 3}
+  m_Script: {fileID: 11500000, guid: b9f2216cb8a0c0f4eae7716771ed7a12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movement: {fileID: 557651496}
+  mouseLook: {fileID: 557651495}
+  gun: {fileID: 0}
 --- !u!114 &557651495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,10 +201,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 557651491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3730618b55cea6448ca215e1f5ee9f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 95320bd190183f24b8557d792cd3884d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 557651494}
+  sensitivityX: 15
+  sensitivityY: 0.2
+  playerCamera: {fileID: 963194228}
+  xClamp: 85
 --- !u!114 &557651496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,11 +215,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557651491}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5ac4d2fa9f81f40b64fadd53bfc8f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 11dd12c841e48bb449bc58fde074dcbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 557651492}
+  speed: 11
+  jumpHeight: 3.5
+  gravity: -30
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +331,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -391,21 +403,6 @@ Transform:
   m_Father: {fileID: 557651493}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6faaf4ce45535e744a90c966eb08bd7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  smoothSpeed: 0.125
-  offSet: {x: 1, y: 2, z: 1}
 --- !u!1 &1933987581
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +496,7 @@ GameObject:
   - component: {fileID: 2138136727}
   - component: {fileID: 2138136726}
   - component: {fileID: 2138136725}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}

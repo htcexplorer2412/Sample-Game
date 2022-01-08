@@ -18,7 +18,9 @@ public class Movement : MonoBehaviour {
     private void Update ()
     {
         isGrounded = Physics.CheckSphere(transform.position, 0.1f, groundMask);
-        if (isGrounded) {
+
+        if (isGrounded) 
+        {
             verticalVelocity.y = 0;
         }
 
@@ -26,10 +28,12 @@ public class Movement : MonoBehaviour {
         controller.Move(horizontalVelocity * Time.deltaTime);
 
         // Jump: v = sqrt(-2 * jumpHeight * gravity)
-        if (jump) {
-            if (isGrounded) {
+        if (jump) 
+        {
+           
                 verticalVelocity.y = Mathf.Sqrt(-2f * jumpHeight * gravity);
-            }
+                
+            
             jump = false;
         }
 

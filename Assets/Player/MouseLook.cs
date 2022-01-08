@@ -3,8 +3,8 @@
 public class MouseLook : MonoBehaviour {
 #pragma warning disable 649
 
-    [SerializeField] float sensitivityX = 8f;
-    [SerializeField] float sensitivityY = 0.5f;
+    [SerializeField] float sensitivityX = 15f;
+    [SerializeField] float sensitivityY = 0.2f;
     float mouseX, mouseY;
 
     [SerializeField] Transform playerCamera;
