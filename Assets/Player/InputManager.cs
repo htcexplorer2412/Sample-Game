@@ -6,6 +6,8 @@ public class InputManager : MonoBehaviour {
 
     [SerializeField] Movement movement;
     [SerializeField] MouseLook mouseLook;
+
+    [SerializeField] Firing firing;
     [SerializeField] Gun gun;
 
     PlayerControls controls;
@@ -30,7 +32,7 @@ public class InputManager : MonoBehaviour {
         groundMovement.MouseY.performed += ctx => mouseInput.y = ctx.ReadValue<float>();
 
         groundMovement.Shoot.started += _ => StartFiring();
-        groundMovement.Shoot.canceled += _ => StopFiring();
+       // groundMovement.Shoot.canceled += _ => StopFiring();
     }
 
     private void Update ()
@@ -41,7 +43,8 @@ public class InputManager : MonoBehaviour {
 
     void StartFiring()
     {
-        fireCoroutine = StartCoroutine(gun.RapidFire());
+        //fireCoroutine = StartCoroutine(gun.RapidFire());
+        firing.Shoot();
     }
 
     void StopFiring()

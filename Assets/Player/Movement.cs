@@ -32,9 +32,7 @@ public class Movement : MonoBehaviour {
         {
            
                 verticalVelocity.y = Mathf.Sqrt(-2f * jumpHeight * gravity);
-                
-            
-            jump = false;
+                jump = false;
         }
 
         verticalVelocity.y += gravity * Time.deltaTime;
