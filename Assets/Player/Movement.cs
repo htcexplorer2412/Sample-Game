@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Movement : MonoBehaviour {
 #pragma warning disable 649
