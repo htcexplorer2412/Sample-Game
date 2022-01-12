@@ -8,7 +8,6 @@ public class InputManager : MonoBehaviour {
     [SerializeField] MouseLook mouseLook;
 
     [SerializeField] Firing firing;
-    [SerializeField] Gun gun;
 
     PlayerControls controls;
     PlayerControls.GroundMovementActions groundMovement;

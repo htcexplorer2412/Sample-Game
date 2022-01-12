@@ -13,6 +13,12 @@ public class Firing : MonoBehaviour
         if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward,out hit))
         {
             Debug.Log(hit.transform.name);
+
+            Target target = hit.transform.GetComponent<Target>();
+            if(target != null)
+            {
+                target.TakeDamage(damage);
+            }
         }
     }
 }
