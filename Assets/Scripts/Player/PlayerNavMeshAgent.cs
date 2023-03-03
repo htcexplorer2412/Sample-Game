@@ -10,6 +10,7 @@ public class PlayerNavMeshAgent : MonoBehaviour
     {
         playerNavMesh = GetComponent<NavMeshAgent>();
         destination = playerNavMesh.destination;
+       
 
     }
 

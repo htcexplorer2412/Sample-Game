@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour {
     [SerializeField] LayerMask groundMask;
     bool isGrounded;
 
+    // TODO Add Unity new Input System
+
     private void Update ()
     {
         isGrounded = Physics.CheckSphere(transform.position, 0.1f, groundMask);
